@@ -1,7 +1,7 @@
 const keyApi2 = "AxWjRWR7WN5vD8GO7xiMBiIUCDRfNoU3";
 
-export default async function getStikers(keyword) {
-    const apiURL = `https://api.giphy.com/v1/stickers/search?api_key=${keyApi2}&q=${keyword}&limit=10&offset=0&rating=g&lang=en`;
+export default async function getStikers(keyword, pag = 0) {
+    const apiURL = `https://api.giphy.com/v1/stickers/search?api_key=${keyApi2}&q=${keyword}&limit=50&offset=${pag}&rating=g&lang=en`;
     return fetch(apiURL)
         .then((res) => res.json())
         .then((response) => {

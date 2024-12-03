@@ -6,7 +6,7 @@ export const Paginacion = ({ paginacion, pageTitle }) => {
     return (
         <div className="flex justify-center items-center gap-2 my-4">
             <CgArrowLeftO className='cursor-pointer w-8 h-8 hover:text-blue-500' />
-            <span> {pageTitle} {paginacion.count} de {paginacion.total_count}</span>
+            <span> {pageTitle} {paginacion.count - paginacion.count} al {paginacion.count}</span>
             <CgArrowRightO className='cursor-pointer w-8 h-8 hover:text-blue-500' />
         </div>
     )
