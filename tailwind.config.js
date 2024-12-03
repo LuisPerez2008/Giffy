@@ -6,6 +6,15 @@ export default {
             backgroundImage: {
                 "fondo-sticker": "url('../src/img/fond2.jpg')",
             },
+            screens: {
+                phone: "320px",
+
+                tablet: "640px",
+
+                laptop: "1024px",
+
+                desktop: "1280px",
+            },
         },
     },
     plugins: [],

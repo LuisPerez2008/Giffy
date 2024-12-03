@@ -7,6 +7,6 @@ export const PageStickers = () => {
 
 
     return (
-        <ListOfElements pageTitle={"Stickers"} element={stickers} setElement={setStickers} cacheName="stickers" service={getStikers} />
+        <ListOfElements pageTitle={"Stickers"} element={stickers} setElement={setStickers} service={getStikers} />
     )
 }

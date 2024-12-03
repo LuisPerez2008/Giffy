@@ -5,12 +5,13 @@ export default async function getGifs(keyword) {
     return fetch(apiURL)
         .then((res) => res.json())
         .then((response) => {
-            const { data } = response;
+            const { data, pagination } = response;
             const gifs = data.map((image) => {
                 const { images, title, id } = image;
                 const { url } = images.downsized_medium;
-                return { title, id, url };
+
+                return { title, id, url, pagination };
             });
-            return gifs;
+            return { data: gifs, pagination };
         });
 }

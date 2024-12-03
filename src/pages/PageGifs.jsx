@@ -8,6 +8,6 @@ export const PageGifs = () => {
     const [gifs, setGifs] = useState([]);
 
     return (
-        <ListOfElements pageTitle="Gifs" element={gifs} setElement={setGifs} cacheName="gifs" service={getGifs} />
+        <ListOfElements pageTitle="Gifs" element={gifs} setElement={setGifs} service={getGifs} />
     )
 }
