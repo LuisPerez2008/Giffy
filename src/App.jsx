@@ -5,10 +5,11 @@ import { PageGifs } from './pages/pageGifs';
 import { PageStickers } from './pages/PageStickers';
 import { useState } from 'react';
 import { KeywordContext } from './context/keywordContext';
+import { PageHome } from './pages/PageHome';
 
 function App() {
 
-  const [keyword, setKeyword] = useState("gif");
+  const [keyword, setKeyword] = useState("goku");
 
   return (
     <div className="max-w-[80%] mx-auto">
@@ -18,7 +19,7 @@ function App() {
 
           <Navbar />
           <Routes>
-            <Route path='/' element={<h1>Home</h1>} />
+            <Route path='/' element={<PageHome />} />
             <Route path='/gifs' element={<PageGifs />} />
             <Route path='/stickers' element={<PageStickers />} />
           </Routes>

@@ -1,7 +1,7 @@
-const keyApi = "AxWjRWR7WN5vD8GO7xiMBiIUCDRfNoU3";
+const keyApi = "sfbqSWI7uECi6yXouz0RVR21QeVy0smb";
 
 export default async function getGifs(keyword) {
-    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${keyApi}&q=${keyword}&limit=25&offset=0&rating=g&lang=en`;
+    const apiURL = `https://api.giphy.com/v1/gifs/search?api_key=${keyApi}&q=${keyword}&limit=50&offset=0&rating=g&lang=en`;
     return fetch(apiURL)
         .then((res) => res.json())
         .then((response) => {

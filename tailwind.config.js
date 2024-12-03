@@ -2,7 +2,11 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                "fondo-sticker": "url('../src/img/fond2.jpg')",
+            },
+        },
     },
     plugins: [],
 };
