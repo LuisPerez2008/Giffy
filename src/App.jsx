@@ -5,7 +5,8 @@ import { PageGifs } from './pages/pageGifs';
 import { PageStickers } from './pages/PageStickers';
 import { useState } from 'react';
 import { KeywordContext } from './context/keywordContext';
-import { PageHome } from './pages/PageHome';
+import { PageFavoritos } from './pages/PageFavoritos';
+import { FavoritosProvider } from './context/FavoritosContext';
 
 function App() {
 
@@ -14,17 +15,19 @@ function App() {
   return (
     <div className="max-w-[80%] mx-auto">
       <KeywordContext.Provider value={{ keyword, setKeyword }} >
+        <FavoritosProvider >
+          <BrowserRouter>
 
-        <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<PageGifs />} />
+              <Route path='/gifs' element={<PageGifs />} />
+              <Route path='/stickers' element={<PageStickers />} />
+              <Route path='/favoritos' element={<PageFavoritos />} />
+            </Routes>
 
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<PageHome />} />
-            <Route path='/gifs' element={<PageGifs />} />
-            <Route path='/stickers' element={<PageStickers />} />
-          </Routes>
-
-        </BrowserRouter>
+          </BrowserRouter>
+        </FavoritosProvider>
 
       </KeywordContext.Provider>
     </div>
