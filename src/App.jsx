@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { Navbar } from './components/Navbar';
-import { PageGifs } from './pages/pageGifs';
+import { PageGifs } from './pages/PageGifs';
 import { PageStickers } from './pages/PageStickers';
 import { useState } from 'react';
 import { KeywordContext } from './context/keywordContext';
