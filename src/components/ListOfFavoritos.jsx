@@ -33,7 +33,7 @@ export const ListOfFavoritos = () => {
             <h1 className='text-center text-3xl font-bold'>Favoritos</h1>
             <div className="flex justify-end items-center my-4">
 
-                <button className='bg-red-500  hover:bg-red-600 text-white font-bold py-2 px-2 rounded ' onClick={limpiarFavoritos}>Limpiar favoritos</button>
+                <button className='bg-red-500  hover:bg-red-600 text-white font-bold py-2 px-2 rounded ' onClick={limpiarFavoritos}>Limpiar</button>
             </div>
 
 
